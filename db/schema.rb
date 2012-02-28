@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(:version => 20120228014445) do
 
   create_table "students", :force => true do |t|
     t.string   "name"
-    t.integer  "teacherz_count", :default => 0
+    t.integer  "teachers_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "teachers", :force => true do |t|
     t.string   "name"
-    t.integer  "studentz_count", :default => 0
+    t.integer  "students_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

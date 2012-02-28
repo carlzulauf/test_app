@@ -2,13 +2,13 @@ class HasManyThroughTestModels < ActiveRecord::Migration
   def change
     create_table :teachers do |t|
       t.string  :name
-      t.integer :studentz_count, default: 0
+      t.integer :students_count, default: 0
       t.timestamps
     end
 
     create_table :students do |t|
       t.string  :name
-      t.integer :teacherz_count, default: 0
+      t.integer :teachers_count, default: 0
       t.timestamps
     end
 
