@@ -16,14 +16,12 @@ ActiveRecord::Schema.define(:version => 20120228014445) do
   create_table "classrooms", :force => true do |t|
     t.integer  "teacher_id"
     t.integer  "student_id"
-    t.string   "room_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "students", :force => true do |t|
     t.string   "name"
-    t.integer  "grade"
     t.integer  "teachers_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -31,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20120228014445) do
 
   create_table "teachers", :force => true do |t|
     t.string   "name"
-    t.string   "qualifications"
     t.integer  "students_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
